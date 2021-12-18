@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   validates :title, presence: true
   validates :due_dt, presence: true
 
+  # TODO add inclusion to status_cd and event_type
+
   before_save :set_default_values
 
   def set_default_values

@@ -18,6 +18,11 @@ type Event {
   eventType: String!
 
   """
+  ID
+  """
+  id: ID!
+
+  """
   Status of event(e.g. COMPLETED, INPROGRESS etc.)
   """
   statusCd: String!
