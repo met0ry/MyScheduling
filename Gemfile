@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem "slim-rails"
 gem 'tele_notify', '~> 0.1.1'
 gem 'sidekiq'
+gem 'rename'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,4 +1,4 @@
-class MySchedulingBotSchema < GraphQL::Schema
+class MySchedulingSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 

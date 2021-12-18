@@ -1,5 +1,5 @@
 {
-  "name": "my-scheduling-bot",
+  "name":"my_scheduling",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.16.5",
