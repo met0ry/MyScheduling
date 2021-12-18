@@ -1,0 +1,43 @@
+"""
+Main object on calendar(e.g. task, reminder etc.)
+"""
+type Event {
+  """
+  Description
+  """
+  desc: String
+
+  """
+  Time at which event is shown
+  """
+  dueDt: String!
+
+  """
+  Type of event
+  """
+  eventType: String!
+
+  """
+  Status of event(e.g. COMPLETED, INPROGRESS etc.)
+  """
+  statusCd: String!
+
+  """
+  Title
+  """
+  title: String!
+}
+
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Query {
+  """
+  TODO
+  """
+  events: [Event!]
+}
