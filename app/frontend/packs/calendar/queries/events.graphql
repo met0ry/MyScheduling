@@ -1,0 +1,10 @@
+query getEvents {
+  events {
+    id
+    title
+  	desc
+    dueDt
+    statusCd
+    eventType
+  }
+}
