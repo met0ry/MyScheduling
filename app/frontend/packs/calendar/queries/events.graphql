@@ -3,7 +3,8 @@ query getEvents {
     id
     title
   	desc
-    dueDt
+    startDt
+    endDt
     statusCd
     eventType
   }

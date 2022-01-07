@@ -3,9 +3,12 @@ class CreateEvents < ActiveRecord::Migration[6.1]
     create_table :events do |t|
       t.string :title
       t.text :desc
+
       t.string :event_type
-      t.datetime :due_dt
       t.string :status_cd
+
+      t.integer :duration
+      t.datetime :start_dt
 
       t.timestamps
     end

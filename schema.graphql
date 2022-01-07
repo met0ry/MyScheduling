@@ -8,9 +8,9 @@ type Event {
   desc: String
 
   """
-  Time at which event is shown
+  Time at which event ends
   """
-  dueDt: String!
+  endDt: String!
 
   """
   Type of event
@@ -21,6 +21,11 @@ type Event {
   ID
   """
   id: ID!
+
+  """
+  Time at which event starts
+  """
+  startDt: String!
 
   """
   Status of event(e.g. COMPLETED, INPROGRESS etc.)

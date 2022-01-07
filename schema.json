@@ -43,8 +43,8 @@
               ]
             },
             {
-              "name": "dueDt",
-              "description": "Time at which event is shown",
+              "name": "endDt",
+              "description": "Time at which event ends",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
@@ -87,6 +87,24 @@
                 "ofType": {
                   "kind": "SCALAR",
                   "name": "ID",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null,
+              "args": [
+
+              ]
+            },
+            {
+              "name": "startDt",
+              "description": "Time at which event starts",
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
                   "ofType": null
                 }
               },

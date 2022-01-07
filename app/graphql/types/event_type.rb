@@ -5,8 +5,13 @@ module Types
     field :id, ID, null: false, description: 'ID'
     field :title, String, null: false, description: 'Title'
     field :desc, String, null: true, description: 'Description'
+
     field :event_type, String, null: false, description: 'Type of event'
-    field :due_dt, String, null: false, description: 'Time at which event is shown'
     field :status_cd, String, null: false, description: 'Status of event(e.g. COMPLETED, INPROGRESS etc.)'
+
+    field :start_dt, String, null: false, description: 'Time at which event starts'
+    # field :duration, Integer, null: false, description: 'Duration of the event'
+
+    field :end_dt, String, null: false, description: 'Time at which event ends'
   end
 end

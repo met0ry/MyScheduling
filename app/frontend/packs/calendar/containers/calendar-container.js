@@ -35,6 +35,8 @@ const CalendarContainer = () => {
       events={events}
       startAccessor="start"
       endAccessor="end"
+      step={15}
+      timeslots={4}
     />
   )
 }
