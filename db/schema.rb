@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2021_12_18_093540) do
     t.text "desc"
     t.string "event_type"
     t.string "status_cd"
-    t.integer "duration"
     t.datetime "start_dt"
+    t.datetime "end_dt"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

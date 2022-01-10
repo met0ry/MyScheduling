@@ -1,6 +1,9 @@
 @import '../css/font_faces';
 @import "../css/mycomponent.scss"; 
 @import 'react-big-calendar/lib/sass/styles';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import './modal.scss';
+@import "react-datepicker/dist/react-datepicker.css";
 
 h1 {  
   font-family: 'Asap';
@@ -14,4 +17,22 @@ h1 {
 .rbc-event {
   border-radius: 0px;
   min-height: 16.75px !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+}
+
+#page_wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.rbc-allday-cell {
+  display: none;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

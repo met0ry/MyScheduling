@@ -7,8 +7,8 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.string :event_type
       t.string :status_cd
 
-      t.integer :duration
       t.datetime :start_dt
+      t.datetime :end_dt
 
       t.timestamps
     end

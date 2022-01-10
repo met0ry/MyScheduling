@@ -10,8 +10,6 @@ module Types
     field :status_cd, String, null: false, description: 'Status of event(e.g. COMPLETED, INPROGRESS etc.)'
 
     field :start_dt, String, null: false, description: 'Time at which event starts'
-    # field :duration, Integer, null: false, description: 'Duration of the event'
-
     field :end_dt, String, null: false, description: 'Time at which event ends'
   end
 end
