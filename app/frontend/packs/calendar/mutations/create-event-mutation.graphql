@@ -1,0 +1,6 @@
+mutation createEventMutation($title: String!, $desc: String, $eventType: String!, $startDt: ISO8601DateTime!, $endDt: ISO8601DateTime!) {
+  createEvent(title: $title, desc: $desc, eventType: $eventType, startDt: $startDt, endDt: $endDt) {
+    success
+    errors
+  }
+}

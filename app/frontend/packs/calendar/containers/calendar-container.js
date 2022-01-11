@@ -31,14 +31,14 @@ const CalendarContainer = () => {
     },
   };
 
-  const handleSelect = ({ start, end }) => {
+  const handleSelect = ({ startDt, endDt }) => {
     const title = window.prompt('New Event name')
     if (title)
       setEvents([
           ...events,
           {
-            start,
-            end,
+            startDt,
+            endDt,
             title,
           },
         ],

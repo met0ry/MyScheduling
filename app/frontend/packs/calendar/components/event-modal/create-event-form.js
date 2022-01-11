@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ReactDatePicker from 'react-datepicker'
+import { useMutation } from '@apollo/client'
+import CREATE_EVENT_MUTATION from '../../mutations/create-event-mutation.graphql'
 
 const CreateEventForm = () => {
 
@@ -15,6 +17,27 @@ const CreateEventForm = () => {
 
     return currentDate.getTime() < selectedDate.getTime();
   };
+
+  const [createEvent, { loading }] = useMutation(CREATE_EVENT_MUTATION, {
+    onCompleted: (data) => {
+      console.log("completed")  
+    },
+    onError: (error) => {
+      console.log(error, "error happend")
+    }
+  });
+
+  const handleSubmit = () => {
+    createEvent({
+      variables: {
+        title: eventTitle,
+        desc: eventDescription,
+        eventType: eventType,
+        startDt: startDate,
+        endDt: endDate
+      }
+    });
+  }
 
   return (
     <React.Fragment>
@@ -76,6 +99,8 @@ const CreateEventForm = () => {
         <div className='inputWrapper'>
           <input type="text" value={eventDescription} onChange={(e) => setEventDescription(e.target.value)} />
         </div>
+
+        <button onClick={handleSubmit}>Create</button>
       </div>
     </React.Fragment>
   )
