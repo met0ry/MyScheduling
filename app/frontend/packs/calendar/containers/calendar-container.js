@@ -31,6 +31,7 @@ const CalendarContainer = () => {
     },
   };
 
+  // TODO after implemention of the emit do this
   const handleSelect = ({ startDt, endDt }) => {
     const title = window.prompt('New Event name')
     if (title)

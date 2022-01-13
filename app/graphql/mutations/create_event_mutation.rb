@@ -14,8 +14,11 @@ module Mutations
     field :errors, [String], ''
 
     def resolve(title:, desc: nil, event_type:, start_dt:, end_dt:)
+      event = Event.new(title: title, desc: desc, event_type: event_type, start_dt: start_dt, end_dt: end_dt)  
 
-      event = Event.create(title: title, desc: desc, event_type: event_type, start_dt: start_dt, end_dt: end_dt)  
+      if event.save
+        EventReminder.perform_at(start_dt - 15.minutes, event.id)
+      end
 
       { success: event.errors.blank?, errors: event.errors }
     end
